@@ -168,14 +168,13 @@ class CartService(Component):
     # All params are trusted as they have been checked before
 
     def _upgrade_cart_item_quantity(self, cart, item, product_qty):
-        with self.env.norecompute():
-            vals = {"product_uom_qty": product_qty}
-            new_values = item.play_onchanges(vals, vals.keys())
-            # clear cache after play onchange
-            real_line_ids = [line.id for line in cart.order_line if line.id]
-            cart._cache["order_line"] = tuple(real_line_ids)
-            vals.update(new_values)
-            item.write(vals)
+        vals = {"product_uom_qty": product_qty}
+        new_values = item.play_onchanges(vals, vals.keys())
+        # clear cache after play onchange
+        real_line_ids = [line.id for line in cart.order_line if line.id]
+        cart._cache["order_line"] = tuple(real_line_ids)
+        vals.update(new_values)
+        item.write(vals)
 
     def _do_clear_cart_cancel(self, cart):
         """
@@ -246,7 +245,8 @@ class CartService(Component):
                     .play_onchanges(vals, vals.keys())
                 )
                 vals.update(new_values)
-                self._create_sale_order_line(vals)
+                existing_item = self._create_sale_order_line(vals)
+            existing_item.order_id.shopinvader_to_be_recomputed = True
         # Recompute cart asynchronously to avoid latencies on frontend
         description = "Recompute cart %s" % (existing_item.id)
         existing_item.order_id.with_delay(
