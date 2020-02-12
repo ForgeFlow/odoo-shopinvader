@@ -163,6 +163,9 @@ class ShopinvaderBackend(models.Model):
         "res.partner.industry",
         string="Available partner industries",
         default=lambda self: self._default_partner_industry_ids(),
+    simple_cart_service = fields.Boolean(
+        help="Technical field to change cart service behaviour. Change this"
+        "only if you know what you are doing"
     )
 
     _sql_constraints = [
