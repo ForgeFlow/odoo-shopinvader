@@ -17,6 +17,7 @@ class SaleOrder(models.Model):
     def _compute_shopinvader_available_carrier_ids(self):
         for order in self:
             if not order.shopinvader_backend_id:
+                order.shopinvader_available_carrier_ids = False
                 continue
             order.shopinvader_available_carrier_ids = (
                 order._available_carriers()
