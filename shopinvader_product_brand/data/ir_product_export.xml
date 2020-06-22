@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="ir_exp_shopinvader_variant_product_brand_name" model="ir.exports.line">
+        <field name="name">product_brand_id/name</field>
+        <field name="alias">product_brand_id:brand/name</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_brand_logo" model="ir.exports.line">
+        <field name="name">product_brand_id/logo</field>
+        <field name="alias">product_brand_id:brand/logo</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+</odoo>
