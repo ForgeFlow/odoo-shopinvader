@@ -16,7 +16,7 @@
                         <field name="description"/>
                     </group>
                     <group name="image_id" string="Slider Images">
-                        <field name="image_id" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" options="{'create_text':'Add a Media'}" nolabel="1"/>
+                        <field name="image_id" class="o_website_sale_image_list" mode="kanban" nolabel="1"/>
                     </group>
                 </sheet>
             </form>
