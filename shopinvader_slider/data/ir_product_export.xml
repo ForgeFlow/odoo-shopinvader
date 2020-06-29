@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_name" model="ir.exports.line">
+        <field name="name">shopinvader_slider_ids/name</field>
+        <field name="alias">shopinvader_slider_ids:slides/name</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_description" model="ir.exports.line">
+        <field name="name">shopinvader_slider_ids/description</field>
+        <field name="alias">shopinvader_slider_ids:slides/description</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_image_path" model="ir.exports.line">
+        <field name="name">shopinvader_slider_ids/image_path</field>
+        <field name="alias">shopinvader_slider_ids:slides/image_path</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_style" model="ir.exports.line">
+        <field name="name">shopinvader_slider_ids/style</field>
+        <field name="alias">shopinvader_slider_ids:slides/style</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+</odoo>
