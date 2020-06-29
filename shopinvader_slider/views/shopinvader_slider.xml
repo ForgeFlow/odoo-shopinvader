@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2020 ForgeFlow S.L.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="shopinvader_slider_form_view">
+        <field name="name">shopinvader.slider.form (in shopinvader_slider)</field>
+        <field name="model">shopinvader.slider</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="style"/>
+                        <field name="description"/>
+                    </group>
+                    <group name="image_id" string="Slider Images">
+                        <field name="image_id" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" options="{'create_text':'Add a Media'}" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+<!--    <record model="ir.ui.view" id="shopinvader_slider_search_view">-->
+<!--        <field name="name">shopinvader.slider.search (in shopinvader_slider)</field>-->
+<!--        <field name="model">shopinvader.slider</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search>-->
+<!--                &lt;!&ndash; TODO &ndash;&gt;-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record model="ir.ui.view" id="shopinvader_slider_tree_view">
+        <field name="name">shopinvader.slider.tree (in shopinvader_slider)</field>
+        <field name="model">shopinvader.slider</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- TODO -->
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="shopinvader_slider_act_window">
+        <field name="name">Shopinvader Slider</field> <!-- TODO -->
+        <field name="res_model">shopinvader.slider</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.ui.menu" id="shopinvader_slider_menu">
+        <field name="name">Shopinvader Slider</field>
+        <field name="parent_id" ref="shopinvader.menu_shopinvader_root"/> <!-- TODO -->
+        <field name="action" ref="shopinvader_slider_act_window"/>
+        <field name="sequence" eval="80"/> <!-- TODO -->
+    </record>
+
+</odoo>
