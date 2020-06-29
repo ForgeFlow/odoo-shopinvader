@@ -8,8 +8,7 @@ class ProductTemplate(models.Model):
 
     _inherit = 'product.template'
 
-    shopinvader_slider_ids = fields.One2many(
+    shopinvader_slider_ids = fields.Many2many(
         "shopinvader.slider",
-        "name",
         string="Shopinvader Slider",
     )
