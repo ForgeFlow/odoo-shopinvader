@@ -4,7 +4,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from collections import defaultdict
-
+from itertools import groupby
 from odoo import api, fields, models
 
 
@@ -30,7 +30,6 @@ class ShopinvaderVariant(models.Model):
         stock_field = self.backend_id.product_stock_field_id.name
         return {"qty": self[stock_field]}
 
-    @api.multi
     def _compute_stock_data(self):
         result = defaultdict(dict)
         for backend in self.mapped("backend_id"):
