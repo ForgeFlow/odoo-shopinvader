@@ -9,8 +9,8 @@
         <field name="inherit_id" ref="product.product_template_form_view" />
         <field name="arch" type="xml">
             <xpath expr="/form/sheet/notebook" position="inside">
-                <page name="slides" string="ShopInvader Slider">
-                    <field name="shopinvader_slider_ids"/>
+                <page name="slides" string="ShopInvader Slider Group">
+                    <field name="shopinvader_slider_group_ids"/>
                 </page>
             </xpath>
         </field>

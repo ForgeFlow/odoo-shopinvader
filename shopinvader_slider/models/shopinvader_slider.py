@@ -11,19 +11,21 @@ class ShopinvaderSlider(models.Model):
     _inherit = ["shopinvader.image.mixin"]
     _image_field = "image_id"
 
-    name = fields.Char()
-    style = fields.Selection(
-        [('slider', 'Slider'), ('carrousel', 'Carrousel')],
-        string='Style', required=True, default="slider"
-    )
+    title = fields.Char()
     description = fields.Char()
     image_path = fields.Char(
-        related="image_id.image_id.image_medium_url",
+        related="image_id.image_medium_url",
         store=True,
         string="Image Medium Url",
     )
     image_id = fields.Many2one(
-        "product.image.relation",
+        "storage.image",
         store=True,
         string="Slider Image",
+    )
+    image_position = fields.Selection(
+        selection=[('left', "Left"), ("right", "Right"), ("top", "Top"), ("bottom", "Bottom")],
+        string="Image Position",
+        required=True,
+        default="left",
     )

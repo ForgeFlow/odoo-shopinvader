@@ -15,4 +15,15 @@
         <field name="perm_unlink" eval="1"/>
     </record>
 
+    <record model="ir.model.access" id="shopinvader_slider_group_access_name"> <!-- TODO acl id -->
+        <field name="name">shopinvader.slider.group access name</field> <!-- TODO acl name -->
+        <field name="model_id" ref="model_shopinvader_slider_group"/>
+        <!-- TODO review and adapt -->
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
 </odoo>

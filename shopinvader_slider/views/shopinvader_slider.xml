@@ -11,9 +11,9 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="style"/>
+                        <field name="title"/>
                         <field name="description"/>
+                        <field name="image_position"/>
                     </group>
                     <group name="image_id" string="Slider Images">
                         <field name="image_id" class="o_website_sale_image_list" mode="kanban" nolabel="1"/>
@@ -39,7 +39,7 @@
         <field name="arch" type="xml">
             <tree>
                 <!-- TODO -->
-                <field name="name"/>
+                <field name="title"/>
             </tree>
         </field>
     </record>

@@ -15,5 +15,6 @@
         'views/product_template.xml',
         'security/shopinvader_slider.xml',
         'views/shopinvader_slider.xml',
+        'views/shopinvader_slider_group_views.xml',
     ],
 }
