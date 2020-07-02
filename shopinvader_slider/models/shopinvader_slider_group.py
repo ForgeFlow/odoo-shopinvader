@@ -1,0 +1,36 @@
+# Copyright 2020 ForgeFlow S.L.
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
+from odoo import api, fields, models, _
+
+
+class ShopinvaderSliderGroup(models.Model):
+
+    _name = 'shopinvader.slider.group'
+    _description = 'Shopinvader Slider Group'
+    _inherit = ["shopinvader.image.mixin"]
+    _image_field = "background_image_id"
+
+    title = fields.Char()
+    style = fields.Selection(
+        [('slider', 'Slider'), ('block', 'Block')],
+        string='Style', required=True, default="slider",
+    )
+    background_image_path = fields.Char(
+        related="background_image_id.image_medium_url",
+        store=True,
+        string="Image Medium Url",
+    )
+    background_image_id = fields.Many2one(
+        "storage.image",
+        store=True,
+        string="Backgroup Group Image",
+    )
+    display_on_mobile = fields.Boolean()
+    display_indicators = fields.Boolean()
+    display_controls = fields.Boolean()
+    full_width = fields.Boolean()
+    slider_ids = fields.Many2many(
+        "shopinvader.slider",
+        string="Shopinvader Slider",
+    )
