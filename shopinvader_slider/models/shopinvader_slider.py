@@ -14,7 +14,7 @@ class ShopinvaderSlider(models.Model):
     title = fields.Char()
     description = fields.Char()
     image_path = fields.Char(
-        related="image_id.image_medium_url",
+        related="image_id.url",
         store=True,
         string="Image Medium Url",
     )

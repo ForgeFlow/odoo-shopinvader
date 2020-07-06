@@ -17,9 +17,9 @@ class ShopinvaderSliderGroup(models.Model):
         string='Style', required=True, default="slider",
     )
     background_image_path = fields.Char(
-        related="background_image_id.image_medium_url",
+        related="background_image_id.url",
         store=True,
-        string="Image Medium Url",
+        string="Background Image Url",
     )
     background_image_id = fields.Many2one(
         "storage.image",
