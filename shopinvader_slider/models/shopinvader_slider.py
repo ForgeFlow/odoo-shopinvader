@@ -12,7 +12,7 @@ class ShopinvaderSlider(models.Model):
     _image_field = "image_id"
 
     title = fields.Char()
-    description = fields.Char()
+    description = fields.Html()
     image_path = fields.Char(
         related="image_id.url",
         store=True,
