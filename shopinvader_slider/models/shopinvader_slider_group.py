@@ -1,20 +1,29 @@
 # Copyright 2020 ForgeFlow S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models, _
+from odoo import fields, models
 
 
 class ShopinvaderSliderGroup(models.Model):
 
-    _name = 'shopinvader.slider.group'
-    _description = 'Shopinvader Slider Group'
+    _name = "shopinvader.slider.group"
+    _description = "Shopinvader Slider Group"
     _inherit = ["shopinvader.image.mixin"]
     _image_field = "background_image_id"
+    _order = "title"
 
     title = fields.Char()
     style = fields.Selection(
-        [('slider', 'Slider'), ('block', 'Block')],
-        string='Style', required=True, default="slider",
+        [("slider", "Slider"), ("block", "Block")],
+        string="Style",
+        required=True,
+        default="slider",
+    )
+    font_color = fields.Selection(
+        [("black", "Black"), ("white", "White"), ("danger", "Danger")],
+        string="Font Color",
+        required=True,
+        default="black",
     )
     background_image_path = fields.Char(
         related="background_image_id.url",
@@ -22,15 +31,12 @@ class ShopinvaderSliderGroup(models.Model):
         string="Background Image Url",
     )
     background_image_id = fields.Many2one(
-        "storage.image",
-        store=True,
-        string="Backgroup Group Image",
+        "storage.image", store=True, string="Backgroup Group Image"
     )
     display_on_mobile = fields.Boolean()
     display_indicators = fields.Boolean()
     display_controls = fields.Boolean()
     full_width = fields.Boolean()
     slider_ids = fields.Many2many(
-        "shopinvader.slider",
-        string="Shopinvader Slider",
+        "shopinvader.slider", string="Shopinvader Slider"
     )

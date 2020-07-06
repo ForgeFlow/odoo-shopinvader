@@ -13,6 +13,7 @@
                     <group>
                         <field name="title"/>
                         <field name="style"/>
+                        <field name="font_color"/>
                     </group>
                     <group name="background_image_id" string="Group Background Image">
                         <field name="background_image_id" class="o_website_sale_image_list" mode="kanban" nolabel="1"/>

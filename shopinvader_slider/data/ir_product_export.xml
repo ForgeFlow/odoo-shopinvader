@@ -13,6 +13,12 @@
         <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
     </record>
 
+    <record id="ir_exp_shopinvader_variant_product_slider_group_font_color" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/font_color</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/font_color</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
     <record id="ir_exp_shopinvader_variant_product_slider_group_background_image_path" model="ir.exports.line">
         <field name="name">shopinvader_slider_group_ids/background_image_path</field>
         <field name="alias">shopinvader_slider_group_ids:slides_group/background_image_path</field>
