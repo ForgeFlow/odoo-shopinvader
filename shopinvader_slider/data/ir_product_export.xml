@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
+    <record id="ir_exp_shopinvader_variant_product_slider_group_sequence" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/sequence</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/sequence</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
     <record id="ir_exp_shopinvader_variant_product_slider_group_title" model="ir.exports.line">
         <field name="name">shopinvader_slider_group_ids/title</field>
         <field name="alias">shopinvader_slider_group_ids:slides_group/title</field>
