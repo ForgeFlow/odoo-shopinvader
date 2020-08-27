@@ -1,7 +1,7 @@
 # Copyright 2020 ForgeFlow S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class ShopinvaderSliderGroup(models.Model):
@@ -10,7 +10,8 @@ class ShopinvaderSliderGroup(models.Model):
     _description = "Shopinvader Slider Group"
     _inherit = ["shopinvader.image.mixin"]
     _image_field = "background_image_id"
-    _order = "title"
+    _order = "sequence"
+    _rec_name = "title"
 
     title = fields.Char()
     style = fields.Selection(
@@ -40,3 +41,12 @@ class ShopinvaderSliderGroup(models.Model):
     slider_ids = fields.Many2many(
         "shopinvader.slider", string="Shopinvader Slider"
     )
+
+    @api.model
+    def _get_sequence(self):
+        others = self.search([('sequence', '<>', False)], order='sequence desc', limit=1)
+        if others:
+            return (others[0].sequence or 0) + 1
+        return 1
+
+    sequence = fields.Integer('Sequence', default=_get_sequence)
