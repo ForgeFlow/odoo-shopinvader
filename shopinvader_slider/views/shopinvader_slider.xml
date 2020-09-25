@@ -11,6 +11,7 @@
             <form>
                 <sheet>
                     <group>
+                        <field name="name"/>
                         <field name="title"/>
                         <field name="description"/>
                         <field name="image_position"/>
