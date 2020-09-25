@@ -11,8 +11,9 @@ class ShopinvaderSlider(models.Model):
     _inherit = ["shopinvader.image.mixin"]
     _image_field = "image_id"
     _order = "name"
+    _rec_name = "name"
 
-    name = fields.Char(string="Name", store=True, related="title", readonly=False, required=True)
+    name = fields.Char(string="Name", required=True)
     title = fields.Char()
     description = fields.Html()
     image_path = fields.Char(

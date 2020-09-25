@@ -12,7 +12,7 @@ class ShopinvaderSliderGroup(models.Model):
     _image_field = "background_image_id"
     _order = "sequence"
 
-    name = fields.Char(string="Name", store=True, related="title", readonly=False, required=True)
+    name = fields.Char(string="Name", required=True)
     title = fields.Char()
     style = fields.Selection(
         [("slider", "Slider"), ("block", "Block")],
