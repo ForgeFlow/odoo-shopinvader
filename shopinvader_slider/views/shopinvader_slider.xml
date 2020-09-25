@@ -40,7 +40,7 @@
         <field name="arch" type="xml">
             <tree>
                 <!-- TODO -->
-                <field name="title"/>
+                <field name="name"/>
             </tree>
         </field>
     </record>
