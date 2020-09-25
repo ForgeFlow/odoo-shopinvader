@@ -5,7 +5,7 @@ from odoo import fields, models
 
 class ProductAttributeValue(models.Model):
     _name = "product.attribute.value"
-    _inherit = ["product.attribute.value", "image.mixin"]
+    _inherit = ["product.attribute.value", "shopinvader.image.mixin"]
     _image_field = "image_id"
 
     image_path = fields.Char(
