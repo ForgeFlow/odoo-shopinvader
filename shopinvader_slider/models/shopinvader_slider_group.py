@@ -11,8 +11,8 @@ class ShopinvaderSliderGroup(models.Model):
     _inherit = ["shopinvader.image.mixin"]
     _image_field = "background_image_id"
     _order = "sequence"
-    _rec_name = "title"
 
+    name = fields.Char(string="Name", store=True, related="title", readonly=False, required=True)
     title = fields.Char()
     style = fields.Selection(
         [("slider", "Slider"), ("block", "Block")],
