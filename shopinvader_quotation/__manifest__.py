@@ -5,13 +5,13 @@
 {
     "name": "Shopinvader Quotation",
     "summary": "Shopinvader Quotation",
-    "version": "12.0.2.0.0",
+    "version": "13.0.1.0.0",
     "category": "e-commerce",
     "development_status": "Production/Stable",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
     "author": "Akretion",
     "license": "AGPL-3",
-    "installable": False,
+    "installable": True,
     "depends": ["shopinvader"],
     "demo": ["demo/email_demo.xml", "demo/notification_demo.xml"],
     "data": [
