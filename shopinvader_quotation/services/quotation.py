@@ -48,6 +48,14 @@ class QuotationService(Component):
             "scope": {"type": "dict", "nullable": True},
         }
 
+    def _validator_return_search(self):
+        return {
+            "id": {"coerce": to_int},
+            "per_page": {"coerce": to_int, "nullable": True},
+            "page": {"coerce": to_int, "nullable": True},
+            "scope": {"type": "dict", "nullable": True},
+        }
+
     # The following method are 'private' and should be never never NEVER call
     # from the controller.
     # All params are trusted as they have been checked before
