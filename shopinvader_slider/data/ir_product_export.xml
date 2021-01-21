@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_sequence" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/sequence</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/sequence</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_title" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/title</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/title</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_style" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/style</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/style</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_font_color" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/font_color</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/font_color</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_background_image_path" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/background_image_path</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/background_image_path</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_display_on_mobile" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/display_on_mobile</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/display_on_mobile</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_display_indicators" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/display_indicators</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/display_indicators</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_display_controls" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/display_controls</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/display_controls</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_full_width" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/full_width</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/full_width</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_slider_title" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/slider_ids/title</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/slider_ids:slides/title</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_slider_description" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/slider_ids/description</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/slider_ids:slides/description</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_slider_image_path" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/slider_ids/image_path</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/slider_ids:slides/image_path</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+    <record id="ir_exp_shopinvader_variant_product_slider_group_slider_image_position" model="ir.exports.line">
+        <field name="name">shopinvader_slider_group_ids/slider_ids/image_position</field>
+        <field name="alias">shopinvader_slider_group_ids:slides_group/slider_ids:slides/image_position</field>
+        <field name="export_id" ref="shopinvader.ir_exp_shopinvader_variant"/>
+    </record>
+
+</odoo>
