@@ -68,17 +68,15 @@ class InvoiceService(Component):
         :return: dict
         """
         invoice_schema = {
-            "invoice_id": {"type": "integer"},
-            "number": {"type": "string"},
-            "date_invoice": {"type": "string"},
+            "move_id": {"type": "integer"},
+            "invoice_date": {"type": "string"},
             "amount_total": {"type": "float"},
             "amount_total_signed": {"type": "float"},
             "amount_tax": {"type": "float"},
             "amount_untaxed": {"type": "float"},
             "amount_untaxed_signed": {"type": "float"},
             "amount_due": {"type": "float"},
-            "type": {"type": "string"},
-            "state": {"type": "string"},
+            "invoice_payment_state": {"type": "string"},
             "type_label": {"type": "string"},
             "state_label": {"type": "string"},
         }
@@ -86,21 +84,19 @@ class InvoiceService(Component):
 
     def _get_parser_invoice(self):
         """
-        Get the parser of account.invoice
+        Get the parser of account.move
         :return: list
         """
         to_parse = [
-            "id:invoice_id",
-            "number",
-            "date_invoice",
+            "id:move_id",
+            "invoice_date",
             "amount_total",
             "amount_total_signed",
             "amount_tax",
             "amount_untaxed",
             "amount_untaxed_signed",
-            "state",
-            "type",
-            "residual:amount_due",
+            "invoice_payment_state",
+            "amount_residual:amount_due",
         ]
         return to_parse
 
