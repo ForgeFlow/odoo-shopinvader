@@ -22,4 +22,5 @@ class SaleService(Component):
     def _convert_one_delivery(self, delivery):
         res = super()._convert_one_delivery(delivery)
         res["lines"] = self._convert_moves(delivery)
+        res["state"] = delivery.state
         return res
