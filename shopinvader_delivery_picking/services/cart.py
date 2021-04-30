@@ -18,10 +18,3 @@ class CartService(Component):
         res["picking_policy"] = {"type": "string", "nullable": False}
         res["commitment_date"] = {"type": "string", "nullable": True}
         return res
-
-    def _convert_one_sale(self, sale):
-        res = super()._convert_one_sale(sale)
-        res["picking_policy"] = sale.picking_policy
-        res["commitment_date"] = sale.commitment_date
-        res["expected_date"] = sale.expected_date
-        return res
