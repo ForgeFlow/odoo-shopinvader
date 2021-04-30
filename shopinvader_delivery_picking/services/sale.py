@@ -6,6 +6,7 @@ from odoo.addons.component.core import Component
 
 _logger = logging.getLogger(__name__)
 
+
 class SaleService(Component):
     _inherit = "shopinvader.sale.service"
     _usage = "sales"
