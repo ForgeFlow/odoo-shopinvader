@@ -17,7 +17,8 @@ class AbstractSaleService(AbstractComponent):
         res["expected_date"] = sale.expected_date
         return res
 
-    def _convert_one_line(self, line):
-        res = super()._convert_one_line(line)
-        res["delivery_date"] = line.delivery_date
-        return res
+    # TODO: depends on a custom module, not odoo core, try to avoid
+    # def _convert_one_line(self, line):
+    #     res = super()._convert_one_line(line)
+    #     res["delivery_date"] = line.delivery_date
+    #     return res
