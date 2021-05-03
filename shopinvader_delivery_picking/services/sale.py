@@ -9,7 +9,6 @@ _logger = logging.getLogger(__name__)
 
 class SaleService(Component):
     _inherit = "shopinvader.sale.service"
-    _usage = "sales"
 
     def _convert_one_move(self, move):
         variant = move.product_id._get_invader_variant(

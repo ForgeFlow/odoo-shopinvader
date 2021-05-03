@@ -12,7 +12,7 @@
     "application": True,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["shopinvader_delivery_carrier"],
+    "depends": ["shopinvader", "shopinvader_delivery_carrier"],
     "data": [],
     "demo": [],
     "qweb": [],

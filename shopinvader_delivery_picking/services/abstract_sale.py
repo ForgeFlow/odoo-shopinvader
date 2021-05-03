@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 
 
 class AbstractSaleService(AbstractComponent):
-    _inherit = "shopinvader.abstract.mail.service"
+    _inherit = "shopinvader.abstract.sale.service"
 
     def _convert_one_sale(self, sale):
         res = super()._convert_one_sale(sale)
