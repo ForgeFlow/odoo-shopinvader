@@ -669,6 +669,15 @@ msgid "Cancel"
 msgstr ""
 
 #. module: shopinvader
+#: code:addons/shopinvader/models/shopinvader_variant.py:0
+#, python-format
+msgid ""
+"Cannot determine main variant for template ID: %s.\n"
+"At least one variant misses one of these values: %s.\n"
+"Will try again later till 'max retries' count is reached."
+msgstr ""
+
+#. module: shopinvader
 #: model:ir.actions.act_window,name:shopinvader.action_cart
 #: model:ir.model.fields.selection,name:shopinvader.selection__sale_order__typology__cart
 #: model:ir.ui.menu,name:shopinvader.menu_sale_order
@@ -1452,6 +1461,11 @@ msgid "Display SEPA QR code"
 msgstr ""
 
 #. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_shopinvader_variant_binding_wizard__run_immediately
+msgid "Do not schedule jobs."
+msgstr ""
+
+#. module: shopinvader
 #: model_terms:ir.ui.view,arch_db:shopinvader.shopinvader_category_unbinding_wizard_form_view
 msgid "Do you really want to unbind these categories ?"
 msgstr ""
@@ -1564,6 +1578,14 @@ msgstr ""
 #. module: shopinvader
 #: model_terms:ir.ui.view,arch_db:shopinvader.shopinvader_partner_view_search
 msgid "Enabled"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,help:shopinvader.field_product_filter__path
+msgid ""
+"Enforce external filter key used for indexing and search.Being a path, you "
+"can specify a dotted path to an inner value. Eg: supplier = {id: 1, name: "
+"'Foo'} -> `supplier.name`"
 msgstr ""
 
 #. module: shopinvader
@@ -2116,7 +2138,7 @@ msgstr ""
 #. module: shopinvader
 #: code:addons/shopinvader/services/service.py:0
 #, python-format
-msgid "Invalid scope %s, error : %s"
+msgid "Invalid scope %s, error: %s"
 msgstr ""
 
 #. module: shopinvader
@@ -3095,6 +3117,11 @@ msgid "Partner with same Tax ID"
 msgstr ""
 
 #. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_product_filter__path
+msgid "Path"
+msgstr ""
+
+#. module: shopinvader
 #: model:ir.model.fields,field_description:shopinvader.field_shopinvader_partner__debit_limit
 msgid "Payable Limit"
 msgstr ""
@@ -3521,6 +3548,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:shopinvader.field_shopinvader_product__route_ids
 #: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant__route_ids
 msgid "Routes"
+msgstr ""
+
+#. module: shopinvader
+#: model:ir.model.fields,field_description:shopinvader.field_shopinvader_variant_binding_wizard__run_immediately
+msgid "Run Immediately"
 msgstr ""
 
 #. module: shopinvader
