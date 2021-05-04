@@ -42,3 +42,6 @@ class HelpdeskCase(CommonCase, NotificationCaseMixin):
                 self.assertEqual(helpdesk_ticket[key], check_data[key])
         self._check_nbr_job_created(1)
         self._perform_created_job()
+
+    def test_search_helpdesk_ticket(self):
+        pass
