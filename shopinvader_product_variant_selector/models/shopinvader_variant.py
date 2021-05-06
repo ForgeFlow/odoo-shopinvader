@@ -22,7 +22,8 @@ class ShopinvaderVariant(models.Model):
             "sku": variant.default_code or "",
             "available": variant.active,
             "selected": variant == self,
-            "id": variant.id
+            "id": variant.id,
+            "images": variant.images
         }
 
     def _get_matching_variant(self, values):
