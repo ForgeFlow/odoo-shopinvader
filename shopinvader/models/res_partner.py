@@ -158,10 +158,10 @@ class ResPartner(models.Model):
             has_shopinvader_user = parent.parent_has_shopinvader_user
         return has_shopinvader_user
 
-    @api.depends("parent_id")
+    @api.depends("type")
     def _compute_address_type(self):
         for partner in self:
-            if partner.parent_id:
+            if partner.type != 'contact':
                 partner.address_type = "address"
             else:
                 partner.address_type = "profile"
