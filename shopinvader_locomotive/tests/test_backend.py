@@ -127,11 +127,13 @@ class TestBackend(TestBackendCommonCase):
                             {
                                 "name": "France",
                                 "id": ref("base.fr").id,
+                                "phone_code": 33,
                                 "states": [],
                             },
                             {
                                 "name": "United States",
                                 "id": ref("base.us").id,
+                                "phone_code": 1,
                                 "states": [
                                     {
                                         u"code": u"AA",
