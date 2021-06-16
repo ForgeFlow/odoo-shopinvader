@@ -8,3 +8,4 @@ class ProductProduct(models.Model):
     _inherit = "product.product"
 
     featured = fields.Boolean(help="Add featured flag on product variant")
+    hero_variant = fields.Boolean(help="Add Hero variant flag on product variant")

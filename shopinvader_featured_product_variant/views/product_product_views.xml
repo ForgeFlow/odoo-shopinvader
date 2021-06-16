@@ -10,6 +10,7 @@
             <field name="shopinvader_bind_ids" position="after">
                 <group string="Variant Attributes">
                     <field name="featured" />
+                    <field name="hero_variant" />
                 </group>
             </field>
         </field>
