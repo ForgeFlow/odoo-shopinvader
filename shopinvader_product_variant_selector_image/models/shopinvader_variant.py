@@ -7,5 +7,8 @@ class ShopinvaderVariant(models.Model):
 
     def _prepare_selector_value(self, variant, value):
         res = super()._prepare_selector_value(variant, value)
-        res.update({"main_image": variant.images[0]})
+        if len(variant.images) > 0:
+            res.update({"main_image": variant.images[0]})
+        else:
+            res.update({"main_image": ""})
         return res
