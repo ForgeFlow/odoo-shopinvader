@@ -10,5 +10,5 @@ class ShopinvaderVariant(models.Model):
         if len(variant.images) > 0:
             res.update({"main_image": variant.images[0]})
         else:
-            res.update({"main_image": ""})
+            res.update({"main_image": {}})
         return res
