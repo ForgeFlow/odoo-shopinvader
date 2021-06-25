@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="shopinvader_variant_tree_view_inherit_sequence">
+        <field name="name">shopinvader.variant.tree.inherit.sequence</field>
+        <field name="model">shopinvader.variant</field>
+        <field name="inherit_id" ref="shopinvader.shopinvader_variant_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="backend_id" position="before">
+                <field name="sequence" widget="handle"/>
+            </field>
+        </field>
+    </record>
+</odoo>
