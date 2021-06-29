@@ -5,9 +5,9 @@
         <field name="model">shopinvader.variant</field>
         <field name="inherit_id" ref="shopinvader.shopinvader_variant_tree_view"/>
         <field name="arch" type="xml">
-            <field name="backend_id" position="before">
+            <xpath expr="//field[@name='backend_id']" position="before">
                 <field name="sequence" widget="handle"/>
-            </field>
+            </xpath>
         </field>
     </record>
 </odoo>
