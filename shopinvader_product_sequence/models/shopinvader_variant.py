@@ -6,6 +6,6 @@ from odoo import fields, models
 
 class ShopinvaderVariant(models.Model):
     _inherit = "shopinvader.variant"
-    _order = "sequence"
+    _order = "sequence,id"
 
     sequence = fields.Integer(default=10)

@@ -13,5 +13,5 @@
         "data/ir_export_product.xml",
         "views/shopinvader_variant_view.xml",
     ],
-    "depends": ["shopinvader"],
+    "depends": ["shopinvader", "shopinvader_search_engine"],
 }
